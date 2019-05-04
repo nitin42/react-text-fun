@@ -2,22 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import InputRange from 'react-input-range';
 
-import { SplitColorChannelText } from './src';
+import { SplitColorChannelText, FliesText } from './src';
 
 import 'react-input-range/lib/css/index.css';
 
 const App = props => {
-  const [value, setValue] = React.useState(10);
+  const [value, setValue] = React.useState(50);
 
   return (
     <div id='app'>
-      <SplitColorChannelText
-        text='Nitin Tulswani'
-        rotation={(value * 8.5) / 8}
-        rgbOffset={value / 100}
-        fontSize={80}
-        fontStyle='italic'
+      <FliesText
+        appendTo='app'
+        text='N'
+        fontSize={220}
+        paddingLeft={80}
+        fontWeigh='bold'
         fontWeight='bold'
+        cellRadius={value / 50}
+        cellWidth={0.012}
+        speed={2}
+        dodge={true}
+        dodgeY={0.35}
+        dodgeSpread={value / 100}
         get2dContext={ctx => console.log(ctx)}
       />
       <InputRange
