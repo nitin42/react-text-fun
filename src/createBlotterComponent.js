@@ -1,10 +1,16 @@
 import React from 'react';
 import { hasBlotterInstance } from './hasBlotterInstance';
 
+// A high order component that creates a blotter text component using the input parameters
 export const createBlotterComponent = ({
+  // A material is a function that returns a shader string and uniforms to update the effects
   material,
+  // setMaterialValues is a function that takes a shader material and input props, and updates the materials with those props
+  // This is invoked on first mount and subsequent state updates
   setMaterialValues,
+  // Default props of the component
   defaultProps,
+  // Component's display name (useful for debugging)
   displayName
 }) => {
   class BlotterComponent extends React.Component {
@@ -15,10 +21,13 @@ export const createBlotterComponent = ({
     static defaultProps = defaultProps;
 
     componentDidMount() {
+      // Check if the blotter instance is initiated otherwise throw an error
       hasBlotterInstance();
 
+      // TODO: Publish a private fork of Blotter with customised build setup
       const BlotterInstance = window.Blotter;
 
+      // Each material function returns an object which includes a shader string and uniforms to update the effects in shader
       const { shader, uniforms } = material(BlotterInstance);
 
       this.material = new BlotterInstance.ShaderMaterial(shader, {
@@ -55,10 +64,12 @@ export const createBlotterComponent = ({
         ? this.props.get2dContext(textObj.context)
         : null;
 
+      // On first mount, set the material values (this is optional)
       setMaterialValues(this.material, this.props);
     }
 
     componentDidUpdate() {
+      // Update the shader material with new values (or uniforms)
       setMaterialValues(this.material, this.props);
     }
 
