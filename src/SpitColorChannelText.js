@@ -25,7 +25,7 @@ export class SplitColorChannelText extends React.Component {
       paddingTop: this.props.paddingTop,
       leading: this.props.lineHeight,
       weight: this.props.fontWeight,
-      style: this.props.textStyle
+      style: this.props.fontStyle
     });
 
     const { shader, uniforms } = channelSplitMaterial(BlotterInstance);
@@ -69,8 +69,8 @@ export class SplitColorChannelText extends React.Component {
   };
 
   updateMaterial = () => {
-    this.material.uniforms.uOffset.value = this.props.rgbOffset;
-    this.material.uniforms.uRotation.value = this.props.rotation;
+    this.material.uniforms.uOffset.value = parseFloat(this.props.rgbOffset);
+    this.material.uniforms.uRotation.value = parseFloat(this.props.rotation);
     this.material.uniforms.uApplyBlur.value = this.props.addBlur ? 1.0 : 0.0;
     this.material.uniforms.uAnimateNoise.value = this.props.addNoise
       ? 1.0
@@ -90,8 +90,10 @@ SplitColorChannelText.defaultProps = {
   fontFamily: 'sans-serif',
   fontSize: 45,
   fontWeight: 400,
+  rotation: 0.0,
+  rgbOffset: 0.05,
   fill: '#4f4f4f',
-  textStyle: 'normal',
+  fontStyle: 'normal',
   paddingBottom: 0,
   paddingTop: 0,
   paddingRight: 0,

@@ -15,8 +15,9 @@ const App = props => {
         text='Nitin Tulswani'
         rotation={(value * 8.5) / 8}
         rgbOffset={value / 100}
-        blur={true}
-        appendTo='app'
+        fontSize={80}
+        fontStyle='italic'
+        fontWeight='bold'
         get2dContext={ctx => console.log(ctx)}
       />
       <InputRange
