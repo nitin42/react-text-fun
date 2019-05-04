@@ -10,7 +10,19 @@ export const FliesText = createBlotterComponent({
     dodge: false,
     dodgeX: 0.5,
     dodgeY: 0.8,
-    dodgeSpread: 0.75
+    dodgeSpread: 0.75,
+    id: 'channel-split-component',
+    text: 'Hello World',
+    fontFamily: 'sans-serif',
+    fontSize: 45,
+    fontWeight: 400,
+    fill: '#4f4f4f',
+    fontStyle: 'normal',
+    paddingBottom: 0,
+    paddingTop: 0,
+    paddingRight: 0,
+    paddingLeft: 0,
+    lineHeight: 1.5
   },
   displayName: 'FliesText',
   setMaterialValues: (material, props) => {
