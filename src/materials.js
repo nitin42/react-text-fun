@@ -1,4 +1,4 @@
-// The materials are copied directly from https://github.com/bradley/Blotter/tree/master/build/materials.
+// The shaders are copied from https://github.com/bradley/Blotter/tree/master/build/materials.
 // Since otherwise we need to have material scripts separately in HTML file, now each component can import
 // these materials and update the shader.
 
