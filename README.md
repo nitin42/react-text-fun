@@ -1,3 +1,3 @@
 # react-text-fun
 
-React meets Blotter.js
+React meets computational typography
