@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import InputRange from 'react-input-range';
 
-import { SplitColorChannelText, FliesText, LiquidDistortionText } from './src';
+import {
+  SplitColorChannelText,
+  FliesText,
+  LiquidDistortionText,
+  DistortionText
+} from './src';
 
 import 'react-input-range/lib/css/index.css';
 
@@ -27,6 +32,7 @@ const App = props => {
         get2dContext={ctx => console.log(ctx)}
       />
       <LiquidDistortionText speed={value / 12.5} volatility={value / 100} />
+      <DistortionText />
       <InputRange
         maxValue={100}
         minValue={0}
