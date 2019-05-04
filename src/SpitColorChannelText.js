@@ -8,10 +8,13 @@ export class SplitColorChannelText extends React.Component {
   material = null;
 
   componentDidMount() {
+    // Check if the blotter instance is initiated. If not, throw an error
     hasBlotterInstance();
 
+    // TODO: publish a private fork of Blotter.js and remove this dependency
     const BlotterInstance = window.Blotter;
 
+    // Create a text object with style properties
     const text = new BlotterInstance.Text(this.props.text, {
       family: this.props.fontFamily,
       size: this.props.fontSize,
@@ -37,10 +40,12 @@ export class SplitColorChannelText extends React.Component {
 
     const textObj = blotter.forText(text);
 
+    // Append the text canvas to a user defined element id or wrapper id
     this.props.appendTo && typeof this.props.appendTo === 'string'
       ? this.appendText(textObj, this.props.appendTo)
       : this.appendText(textObj, this.props.id);
 
+    // Invoke the prop callback with rendering context. Useful if you want to update the canvas with other third party libs.
     this.props.get2dContext && typeof this.props.get2dContext === 'function'
       ? this.props.get2dContext(textObj.context)
       : null;
@@ -49,6 +54,7 @@ export class SplitColorChannelText extends React.Component {
   }
 
   componentDidUpdate() {
+    // Update the material with new props
     this.updateMaterial();
   }
 
