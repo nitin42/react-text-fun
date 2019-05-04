@@ -3,7 +3,7 @@ import { liquidDistortionMaterial } from './materials';
 
 export const LiquidDistortionText = createBlotterComponent({
   defaultProps: {
-    id: 'channel-split-component',
+    id: 'liquid-distortion-component',
     text: 'Hello World',
     fontFamily: 'sans-serif',
     fontSize: 45,

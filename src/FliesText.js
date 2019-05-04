@@ -11,7 +11,7 @@ export const FliesText = createBlotterComponent({
     dodgeX: 0.5,
     dodgeY: 0.8,
     dodgeSpread: 0.75,
-    id: 'channel-split-component',
+    id: 'flies-text-component',
     text: 'Hello World',
     fontFamily: 'sans-serif',
     fontSize: 45,
