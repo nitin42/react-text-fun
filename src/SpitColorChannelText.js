@@ -35,19 +35,34 @@ export class SplitColorChannelText extends React.Component {
       texts: text
     });
 
-    const elem = document.getElementById('app');
-    const scope = blotter.forText(text);
+    const textObj = blotter.forText(text);
 
-    scope.appendTo(elem);
+    this.props.appendTo && typeof this.props.appendTo === 'string'
+      ? this.appendText(textObj, this.props.appendTo)
+      : this.appendText(textObj, this.props.id);
 
-    this.updateMaterials();
+    this.props.get2dContext && typeof this.props.get2dContext === 'function'
+      ? this.props.get2dContext(textObj.context)
+      : null;
+
+    this.updateMaterial();
   }
 
   componentDidUpdate() {
-    this.updateMaterials();
+    this.updateMaterial();
   }
 
-  updateMaterials = () => {
+  appendText = (textObj, id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      textObj.appendTo(element);
+    } else {
+      console.error(`Couldn't find an element with id '${id}'.`);
+    }
+  };
+
+  updateMaterial = () => {
     this.material.uniforms.uOffset.value = this.props.rgbOffset;
     this.material.uniforms.uRotation.value = this.props.rotation;
     this.material.uniforms.uApplyBlur.value = this.props.addBlur ? 1.0 : 0.0;

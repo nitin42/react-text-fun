@@ -16,7 +16,8 @@ const App = props => {
         rotation={(value * 8.5) / 8}
         rgbOffset={value / 100}
         blur={true}
-        get2DContext={ctx => console.log(ctx)}
+        appendTo='app'
+        get2dContext={ctx => console.log(ctx)}
       />
       <InputRange
         maxValue={100}
