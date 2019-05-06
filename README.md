@@ -1,3 +1,5 @@
+WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
+
 # react-text-fun
 
 > React meets Blotter.js
