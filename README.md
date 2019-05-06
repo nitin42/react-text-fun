@@ -16,13 +16,13 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 * [API reference]()
 
-### Introdution
+## Introdution
 
 `react-text-fun` is a small component library that encapsulates Blotter.js shader materials in the form of React components and provides a very easy to use API.
 
 I created `react-text-fun` after finding myself imperatively using the Blotter.js APIs for custom and existing materials. I decided to convert all its shader materials in the form of React components to make it easier to work with. Hope you find it useful as well 🙂
 
-### Install
+## Install
 
 Just put this script in your HTML file and we are all set go 🚀
 
@@ -32,7 +32,7 @@ Just put this script in your HTML file and we are all set go 🚀
 
 > Note: Currently, you won't be able to install `react-text-fun` via npm since it uses Blotter.js and it currently can't be consumed via npm 😞. If you're interested in trying out and helping their team to publish the library, feel free to check out [this issue](https://github.com/bradley/Blotter/issues/18) otherwise let's jump to some interesting stuff 😍
 
-### Example
+## Example
 
 Let's take an example of distortion text material that distorts the shape of the text using various transforms
 
@@ -61,11 +61,24 @@ Cool, isn't it?
 
 [Check out the API reference]() for `DistortionText` component to see what other effects you can apply to the text.
 
-### Blotter components
+## Blotter components
 
-#### Distortion Text
+### Distortion Text
 
 Distortion text is based on the [Rolling Distort Material](https://blotter.js.org/#/materials/RollingDistortMaterial) from Blotter.js. 
+
+**Example**
+
+```jsx
+<DistortionText
+  speed={1.5}
+  rotation={45.0}
+  distortX={4.9}
+  distortY={6.5}
+  noiseAmplitude={0.8}
+  noiseVolatility={1.2}
+/>
+```
 
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
@@ -77,3 +90,7 @@ Distortion text is based on the [Rolling Distort Material](https://blotter.js.or
 | `noiseVolatility` | describes the overall change your text will experience     |    number |
 
 While it's a good practice to change the values of these props and see the result, I'll still recommend reading [this]() brilliant piece written by [Josh Comeau](https://www.joshwcomeau.com/) on [Waveforms](https://pudding.cool/2018/02/waveforms/). It will give you a little more idea on how and what values you should use to update the noise amplitude and its volatility.
+
+### Flies Text
+
+Flies Text component is based on the [`FliesMaterial`](https://blotter.js.org/#/materials/FliesMaterial) from Blotter.js
