@@ -65,13 +65,6 @@ Cool, isn't it?
 
 #### Distortion Text
 
-    speed: 0.084,
-    rotation: 120.0,
-    distortX: 0.06,
-    distortY: 0.09,
-    noiseAmplitude: 0.101,
-    noiseVolatility: 8
-
 Distortion text is based on the [Rolling Distort Material](https://blotter.js.org/#/materials/RollingDistortMaterial) from Blotter.js. 
 
 | Prop        | Description           | Type  |
