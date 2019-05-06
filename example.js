@@ -1,46 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import InputRange from 'react-input-range';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import InputRange from 'react-input-range'
 
-import {
-  SplitColorChannelText,
-  FliesText,
-  LiquidDistortionText,
-  DistortionText
-} from './src';
+import { SplitColorChannelText, FliesText, LiquidDistortionText, DistortionText } from './src'
 
-import 'react-input-range/lib/css/index.css';
+import 'react-input-range/lib/css/index.css'
 
 const App = props => {
-  const [value, setValue] = React.useState(50);
+	const [value, setValue] = React.useState(50)
 
-  return (
-    <div id='app'>
-      <FliesText
-        appendTo='app'
-        text='N'
-        fontSize={220}
-        paddingLeft={80}
-        fontWeigh='bold'
-        fontWeight='bold'
-        cellRadius={value / 50}
-        cellWidth={0.012}
-        speed={2}
-        dodge={true}
-        dodgeY={0.35}
-        dodgeSpread={value / 100}
-        get2dContext={ctx => console.log(ctx)}
-      />
-      <LiquidDistortionText speed={value / 12.5} volatility={value / 100} />
-      <DistortionText />
-      <InputRange
-        maxValue={100}
-        minValue={0}
-        value={value}
-        onChange={val => setValue(val)}
-      />
-    </div>
-  );
-};
+	return (
+		<div id="app">
+			<FliesText
+				appendTo="app"
+				text="N"
+				fontSize={220}
+				paddingLeft={80}
+				fontWeigh="bold"
+				fontWeight="bold"
+				cellRadius={value / 50}
+				cellWidth={0.012}
+				speed={2}
+				dodge={true}
+				dodgeY={0.35}
+				dodgeSpread={value / 100}
+				get2dContext={ctx => console.log(ctx)}
+			/>
+			<LiquidDistortionText speed={value / 12.5} volatility={value / 100} />
+			<DistortionText />
+			<InputRange maxValue={100} minValue={0} value={value} onChange={val => setValue(val)} />
+		</div>
+	)
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
