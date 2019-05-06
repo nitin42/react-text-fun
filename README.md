@@ -27,7 +27,7 @@ I created `react-text-fun` after finding myself imperatively using the Blotter.j
 Just put this script in your HTML file and we are all set go 🚀
 
 ```
-
+<script src="https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js"></script>
 ```
 
 > Note: Currently, you won't be able to install `react-text-fun` via npm since it uses Blotter.js and it currently can't be consumed via npm 😞. If you're interested in trying out and helping their team to publish the library, feel free to check out [this issue](https://github.com/bradley/Blotter/issues/18) otherwise let's jump to some interesting stuff 😍
@@ -56,3 +56,31 @@ If you've followed the installation instructions carefully, you should see this 
 <p align="center">
   <img src="./assets/distortion-text.gif" />
 </p>
+
+Cool, isn't it?
+
+[Check out the API reference]() for `DistortionText` component to see what other effects you can apply to the text.
+
+### Blotter components
+
+#### Distortion Text
+
+    speed: 0.084,
+    rotation: 120.0,
+    distortX: 0.06,
+    distortY: 0.09,
+    noiseAmplitude: 0.101,
+    noiseVolatility: 8
+
+Distortion text is based on the [Rolling Distort Material](https://blotter.js.org/#/materials/RollingDistortMaterial) from Blotter.js. 
+
+| Prop        | Description           | Type  |
+| ------------- |:-------------:| -----:|
+| `speed`     | Increase or decrease the speed of animation applied to the distortion on your text | number |
+| `rotation`     | Change the rotation of distortion effect      |  number |
+| `distortX` | update the horizontal position in which the distortion effect will be applied      |    number |
+| `distortY` | update the vertical position in which the distortion effect will be applied      |    number |
+| `noiseAmplitude` | change the noise amplitude (amplitude of toughs and crests)     |    number |
+| `noiseVolatility` | describes the overall change your text will experience     |    number |
+
+While it's a good practice to change the values of these props and see the result, I'll still recommend reading [this]() brilliant piece written by [Josh Comeau](https://www.joshwcomeau.com/) on [Waveforms](https://pudding.cool/2018/02/waveforms/). It will give you a little more idea on how and what values you should use to update the noise amplitude and its volatility.
