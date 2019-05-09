@@ -93,4 +93,15 @@ While it's a good practice to change the values of these props and see the resul
 
 ### Flies Text
 
-Flies Text component is based on the [`FliesMaterial`](https://blotter.js.org/#/materials/FliesMaterial) from Blotter.js
+Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/materials/FliesMaterial) from Blotter.js
+
+| Prop        | Description           | Type  |
+| ------------- |:-------------:| -----:|
+| `cellWidth`     | Width of a cell | number |
+| `cellRadius`     | Radius of a cell  |  number |
+| `speed` | Animation speed    |    number |
+| `dodge` | whether or not to dodge cells from a position (x-axis or y-axis)     |    boolean |
+| `dodgeX` | dodge position of cells around x-axis    |    number |
+| `dodgeY` | dodge position of cells around y-axis   |    number |
+
+Try the examples to get more idea about dodging the cells. Change the values for `dodgeX` and  `dodgeY`, and see if you can create something interesting 😉
