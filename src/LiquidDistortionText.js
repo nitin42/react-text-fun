@@ -8,8 +8,6 @@ export const LiquidDistortionText = createBlotterComponent({
     fontFamily: 'sans-serif',
     fontSize: 45,
     fontWeight: 400,
-    rotation: 0.0,
-    rgbOffset: 0.05,
     fill: '#4f4f4f',
     fontStyle: 'normal',
     paddingBottom: 0,

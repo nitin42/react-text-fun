@@ -65,7 +65,7 @@ Cool, isn't it?
 
 ### Distortion Text
 
-Distortion text is based on the [Rolling Distort Material](https://blotter.js.org/#/materials/RollingDistortMaterial) from Blotter.js. 
+Distortion text is based on the [Rolling Distort Material](https://blotter.js.org/#/materials/RollingDistortMaterial) in Blotter.js. 
 
 **Example**
 
@@ -93,7 +93,7 @@ While it's a good practice to change the values of these props and see the resul
 
 ### Flies Text
 
-Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/materials/FliesMaterial) from Blotter.js
+Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/materials/FliesMaterial) in Blotter.js
 
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
@@ -104,4 +104,22 @@ Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/ma
 | `dodgeX` | dodge position of cells around x-axis    |    number |
 | `dodgeY` | dodge position of cells around y-axis   |    number |
 
-Try the examples to get more idea about dodging the cells. Change the values for `dodgeX` and  `dodgeY`, and see if you can create something interesting 😉
+Try the examples to get more idea about dodging the cells. Change the values for `dodgeX` and  `dodgeY`, and see if you can create some interesting effects 😉
+
+### Split color channel
+
+Split color channel is based on [ChannelSplitMaterial](https://blotter.js.org/#/materials/ChannelSplitMaterial) in Blotter.js
+
+| Prop        | Description           | Type  |
+| ------------- |:-------------:| -----:|
+| `rotation`     | Change the angle of rgb channel splitting | number |
+| `rgbOffset`     | Describes the distance apart the RGB values should spread  |  number |
+| `addBlur` | Add blur to the text    |    boolean |
+| `addNoise` | Add noise distortion to text     |    boolean |
+
+### Liquid distortion text
+
+| Prop        | Description           | Type  |
+| ------------- |:-------------:| -----:|
+| `speed`     | Speed of the animation | number |
+| `volatility`     | Describes the change in distortion of a text  |  number |
