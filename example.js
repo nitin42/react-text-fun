@@ -23,7 +23,7 @@ const App = props => {
 				speed={2}
 				dodge={true}
 				dodgeY={0.35}
-				dodgeSpread={value / 100}
+				dodgeSpread={value / 220}
 				get2dContext={ctx => console.log(ctx)}
 			/>
 			<InputRange maxValue={100} minValue={0} value={value} onChange={val => setValue(val)} />
