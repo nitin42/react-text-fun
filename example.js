@@ -13,7 +13,7 @@ const App = props => {
 		<div id="app">
 			<FliesText
 				appendTo="app"
-				text="N"
+				text="ReactTextFun"
 				fontSize={220}
 				paddingLeft={80}
 				fontWeigh="bold"
@@ -26,8 +26,6 @@ const App = props => {
 				dodgeSpread={value / 100}
 				get2dContext={ctx => console.log(ctx)}
 			/>
-			<LiquidDistortionText speed={value / 12.5} volatility={value / 100} />
-			<DistortionText />
 			<InputRange maxValue={100} minValue={0} value={value} onChange={val => setValue(val)} />
 		</div>
 	)

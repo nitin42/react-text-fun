@@ -14,6 +14,8 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 * [Components](#blotter-components)
 
+* [Styling text](#styling-text)
+
 ## Introdution
 
 `react-text-fun` is a small component library that encapsulates Blotter.js shader materials in the form of React components and provides a very easy to use API.
@@ -156,3 +158,22 @@ import { LiquidDistortionText } from 'react-text-fun';
 | ------------- |:-------------:| -----:|
 | `speed`     | Speed of the animation | number |
 | `volatility`     | Describes the change in distortion of a text  |  number |
+
+## Styling text
+
+You can use the below props with any of the above component to style the text. These are the common props.
+
+| Prop        | Description           | Type  |
+| ------------- |:-------------:| -----:|
+| `id`     | An unique id for the canvas | string |
+| `text`     | Text string to render |  string |
+| `fontFamily`     | Set a different font type | string |
+| `fontSize`     | Set the font size |  number |
+| `fontWeight`     | Set the font weight | number |
+| `fill`     | Sets the text color |  string |
+| `fontStyle`     | Specify a font style (italic, normal or bold) | string |
+| `lineHeight`     | Set the line height |  number |
+| `paddingTop`     | Apply top padding | number |
+| `paddingBottom`     | Apply bottom padding |  number |
+| `paddingLeft`     | Apply padding on left side | number |
+| `paddingRight`     | Apply padding on right side |  number |
