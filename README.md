@@ -166,6 +166,7 @@ You can use the below props with any of the above component to style the text. T
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
 | `id`     | An unique id for the canvas | string |
+| `appendTo`     | Specify an id for an element to which the canvas should be appended | string |
 | `text`     | Text string to render |  string |
 | `fontFamily`     | Set a different font type | string |
 | `fontSize`     | Set the font size |  number |
