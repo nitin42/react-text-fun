@@ -100,14 +100,14 @@ Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/ma
 ```jsx
 import { FliesText } from 'react-text-fun';
 
-  <FliesText
-    cellRadius={0.5}
-    cellWidth={0.012}
-    speed={2}
-    dodge={true}
-    dodgeY={0.35}
-    dodgeSpread={3.5}
-  />
+<FliesText
+  cellRadius={0.5}
+  cellWidth={0.012}
+  speed={2}
+  dodge={true}
+  dodgeY={0.35}
+  dodgeSpread={3.5}
+/>
 ```
 
 | Prop        | Description           | Type  |
