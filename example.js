@@ -18,6 +18,7 @@ const App = props => {
 				paddingLeft={80}
 				fontWeigh="bold"
 				fontWeight="bold"
+				fill="pink"
 				cellRadius={value / 50}
 				cellWidth={0.012}
 				speed={2}
