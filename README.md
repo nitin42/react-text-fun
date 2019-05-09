@@ -12,9 +12,7 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 * [Example](#example)
 
-* [Components](#components)
-
-* [API reference]()
+* [Components](#blotter-components)
 
 ## Introdution
 
