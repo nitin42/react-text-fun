@@ -70,6 +70,8 @@ Distortion text is based on the [Rolling Distort Material](https://blotter.js.or
 **Example**
 
 ```jsx
+import { DistortionText } from 'react-text-fun'
+
 <DistortionText
   speed={1.5}
   rotation={45.0}
@@ -95,6 +97,19 @@ While it's a good practice to change the values of these props and see the resul
 
 Flies Text component is based on the [FliesMaterial](https://blotter.js.org/#/materials/FliesMaterial) in Blotter.js
 
+```jsx
+import { FliesText } from 'react-text-fun';
+
+  <FliesText
+    cellRadius={0.5}
+    cellWidth={0.012}
+    speed={2}
+    dodge={true}
+    dodgeY={0.35}
+    dodgeSpread={3.5}
+  />
+```
+
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
 | `cellWidth`     | Width of a cell | number |
@@ -110,6 +125,17 @@ Try the examples to get more idea about dodging the cells. Change the values for
 
 Split color channel is based on [ChannelSplitMaterial](https://blotter.js.org/#/materials/ChannelSplitMaterial) in Blotter.js
 
+```jsx
+import { SplitColorChannelText } from 'react-text-fun';
+
+<SplitColorChannelText
+  rotation={85.0}
+  rgbOffset={2.8}
+  addBlur={false}
+  addNoise={true}
+/>
+```
+
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
 | `rotation`     | Change the angle of rgb channel splitting | number |
@@ -118,6 +144,15 @@ Split color channel is based on [ChannelSplitMaterial](https://blotter.js.org/#/
 | `addNoise` | Add noise distortion to text     |    boolean |
 
 ### Liquid distortion text
+
+```jsx
+import { LiquidDistortionText } from 'react-text-fun';
+
+<LiquidDistortionText
+  speed={0.6}
+  volatility={2.4}
+/>
+```
 
 | Prop        | Description           | Type  |
 | ------------- |:-------------:| -----:|
