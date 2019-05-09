@@ -5,6 +5,7 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 > React meets Blotter.js
 
 <p align="center">
+  <img src="./assets/demo.gif" />
 </p>
 
 ## Table of contents
