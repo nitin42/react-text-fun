@@ -20,6 +20,8 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 * [Styling text](#styling-text)
 
+* [Using text canvas](#using-text-canvas)
+
 ## Introdution
 
 `react-text-fun` is a small component library that encapsulates Blotter.js shader materials in the form of React components and provides a very easy to use API.
@@ -182,3 +184,13 @@ You can use the below props with any of the above component to style the text. T
 | `paddingBottom`     | Apply bottom padding |  number |
 | `paddingLeft`     | Apply padding on left side | number |
 | `paddingRight`     | Apply padding on right side |  number |
+
+## Using text canvas
+
+You can also access the canvas which renders the text using the callback function `get2dContext`. As the prop name suggests, the callback function receives the 2D rendering context for the drawing surface as an argument. This is useful if you want to update the canvas using any other third party library.
+
+`get2dContext` can be used with any of the above material components. For instance, here is an example of how you would use it with `FliesText` component.
+
+```jsx
+<FliesText {...props} get2dContext={ctx => console.log(ctx)} />
+```
