@@ -125,8 +125,6 @@ import { FliesText } from 'react-text-fun';
 | `dodgeX` | dodge position of cells around x-axis    |    number |
 | `dodgeY` | dodge position of cells around y-axis   |    number |
 
-Try the examples to get more idea about dodging the cells. Change the values for `dodgeX` and  `dodgeY`, and see if you can create some interesting effects 😉
-
 ### Split color channel
 
 Split color channel is based on [ChannelSplitMaterial](https://blotter.js.org/#/materials/ChannelSplitMaterial) in Blotter.js
