@@ -63,7 +63,7 @@ const App = props => (
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-If you've followed the installation instructions carefully, you should see this output.
+If your example compiles successfully, you should see this output.
 
 <p align="center">
   <img src="./assets/distortion-text.gif" />
@@ -71,7 +71,7 @@ If you've followed the installation instructions carefully, you should see this 
 
 Cool, isn't it?
 
-[Check out the API reference]() for `DistortionText` component to see what other effects you can apply to the text.
+[Check out the API reference](#distortion-text) for `DistortionText` component to see what other effects you can apply to the text.
 
 ## Blotter components
 
@@ -105,7 +105,7 @@ import { DistortionText } from 'react-text-fun'
 | `noiseAmplitude` | change the noise amplitude (amplitude of toughs and crests)     |    number |
 | `noiseVolatility` | describes the overall change your text will experience     |    number |
 
-While it's a good practice to change the values of these props and see the result, I'll still recommend reading [this]() brilliant piece written by [Josh Comeau](https://www.joshwcomeau.com/) on [Waveforms](https://pudding.cool/2018/02/waveforms/). It will give you a little more idea on how and what values you should use to update the noise amplitude and its volatility.
+I'll recommend reading [this](https://pudding.cool/2018/02/waveforms/) brilliant piece written by [Josh Comeau](https://www.joshwcomeau.com/) on Waveforms. It will give you a little more idea on how and what values you should use to update the noise amplitude, and change its volatility.
 
 ### Flies Text
 
