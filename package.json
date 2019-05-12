@@ -15,7 +15,8 @@
 	"scripts": {
 		"build": "rollup -c",
 		"start": "rollup -c -w",
-		"example": "parcel index.html"
+		"example": "parcel index.html",
+		"build:website": "parcel build example.js"
 	},
 	"peerDependencies": {
 		"react": "^15.0.0 || ^16.0.0",
@@ -40,9 +41,7 @@
 		"rollup-plugin-postcss": "^1.6.2",
 		"rollup-plugin-url": "^1.4.0"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"dependencies": {
 		"@emotion/core": "^10.0.10",
 		"@emotion/styled": "^10.0.11",

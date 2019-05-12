@@ -22,21 +22,27 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 * [Using text canvas](#using-text-canvas)
 
+* [Live examples](#live-examples)
+
 ## Introdution
 
 `react-text-fun` is a small component library that encapsulates Blotter.js shader materials in the form of React components and provides a very easy to use API.
 
-I created `react-text-fun` after finding myself imperatively using the Blotter.js APIs for custom and existing materials. I decided to convert all its shader materials in the form of React components to make it easier to work with. Hope you find it useful as well 🙂
+I created `react-text-fun` after finding myself imperatively using the Blotter.js APIs for custom and existing materials. I decided to convert all its shader materials in the form of React components to make it easier to work with.
+
+Hope you find it useful as well 🙂
 
 ## Install
 
-Just put this script in your HTML file and we are all set go 🚀
+```
+yarn add react-text-fun
+```
+
+This package also depends on `Blotter.js` so make sure you put the below script in your HTML file.
 
 ```
 <script src="https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js"></script>
 ```
-
-> Note: Currently, you won't be able to install `react-text-fun` via npm since it uses Blotter.js and it currently can't be consumed via npm 😞. If you're interested in trying out and helping their team to publish the library, feel free to check out [this issue](https://github.com/bradley/Blotter/issues/18) otherwise let's jump to some interesting stuff 😍
 
 ## Example
 
@@ -79,10 +85,12 @@ Distortion text is based on the [Rolling Distort Material](https://blotter.js.or
 import { DistortionText } from 'react-text-fun'
 
 <DistortionText
+  text="Hello World"
+  fontSize={120}
   speed={1.5}
   rotation={45.0}
-  distortX={4.9}
-  distortY={6.5}
+  distortX={0.9}
+  distortY={0.5}
   noiseAmplitude={0.8}
   noiseVolatility={1.2}
 />
@@ -108,11 +116,13 @@ import { FliesText } from 'react-text-fun';
 
 <FliesText
   cellRadius={0.5}
-  cellWidth={0.012}
+  text="Hello World"
+  fontSize={120}
+  cellWidth={0.02}
   speed={2}
   dodge={true}
-  dodgeY={0.35}
-  dodgeSpread={3.5}
+  dodgeY={0.05}
+  dodgeSpread={0.08}
 />
 ```
 
@@ -133,8 +143,10 @@ Split color channel is based on [ChannelSplitMaterial](https://blotter.js.org/#/
 import { SplitColorChannelText } from 'react-text-fun';
 
 <SplitColorChannelText
-  rotation={85.0}
-  rgbOffset={2.8}
+  text="Hello World"
+  fontSize={120}
+  rotation={5.0}
+  rgbOffset={0.8}
   addBlur={false}
   addNoise={true}
 />
@@ -153,8 +165,10 @@ import { SplitColorChannelText } from 'react-text-fun';
 import { LiquidDistortionText } from 'react-text-fun';
 
 <LiquidDistortionText
+  text="Hello World"
+  fontSize={120}
   speed={0.6}
-  volatility={2.4}
+  volatility={0.02}
 />
 ```
 
@@ -192,3 +206,7 @@ You can also access the canvas which renders the text using the callback functio
 ```jsx
 <FliesText {...props} get2dContext={ctx => console.log(ctx)} />
 ```
+
+## Live examples
+
+You can find the live code examples for all the components on the [codesandbox](https://codesandbox.io/embed/9jvp8n69kw)

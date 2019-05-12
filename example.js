@@ -101,7 +101,11 @@ const App = props => {
 		setWidth(width)
 	})
 
-	const updateShader = e => setValue(e.clientX)
+	const updateShader = e => {
+		if (!detectMobile.isMobile()) {
+			setValue(e.clientX)
+		}
+	}
 
 	return (
 		<Container top="50px" direction="column">
@@ -116,7 +120,6 @@ const App = props => {
 					speed={6}
 					dodge={true}
 					dodgeY={value === 0 ? 2.0 : value / 1000}
-					get2dContext={c => console.log(c)}
 				/>
 			</div>
 			<div id="description">
