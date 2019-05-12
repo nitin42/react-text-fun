@@ -109,15 +109,17 @@ const App = props => {
 
 	return (
 		<Container top="50px" direction="column" ref={ref} onMouseMove={updateShader}>
-			<div id="split-color">
-				<SplitColorChannelText
-					appendTo="split-color"
+			<div id="app">
+				<FliesText
+					appendTo="app"
 					text="React Text Fun"
 					fontSize={detectMobile.isMobile() ? 50 : 220}
-					rotation={0.8}
-					rgbOffset={value === 0 ? 0.095 : value / 10000}
-					addBlur={false}
-					addNoise={true}
+					fontWeight="bold"
+					fill="#2f2f2f"
+					cellWidth={value < 1 ? 0.02 : value * 0.000015}
+					speed={6}
+					dodge={true}
+					dodgeY={value === 0 ? 2.0 : value / 1000}
 				/>
 			</div>
 			<div id="description">
