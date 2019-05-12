@@ -16,7 +16,7 @@
 		"build": "rollup -c",
 		"start": "rollup -c -w",
 		"example": "parcel index.html",
-		"build:website": "parcel build example.js"
+		"build:website": "parcel build website.js"
 	},
 	"peerDependencies": {
 		"react": "^15.0.0 || ^16.0.0",
