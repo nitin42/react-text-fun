@@ -26,7 +26,7 @@ WORK IN PROGRESS! COME BACK WHEN ITS DONE 😅
 
 ## Introdution
 
-`react-text-fun` is a small component library that encapsulates Blotter.js shader materials in the form of React components and provides a very easy to use API.
+`react-text-fun` is a small component library that encapsulates [Blotter.js](https://blotter.js.org/#/materials) shader materials in the form of React components and provides a very easy to use API.
 
 I created `react-text-fun` after finding myself imperatively using the Blotter.js APIs for custom and existing materials. I decided to convert all its shader materials in the form of React components to make it easier to work with.
 
